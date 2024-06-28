@@ -1,0 +1,134 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    text-align: center;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+main {
+    margin-top: 80px;
+    width: 100%;
+    max-width: 600px;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+section {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1em 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 2em;
+    width: 100%;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+
+form input {
+    padding: 0.75em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form button {
+    padding: 0.75em;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+#convertTemp {
+    margin-top: 1em;
+    padding: 0.75em;
+    border: none;
+    border-radius: 4px;
+    background-color: #2196F3;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#convertTemp:hover {
+    background-color: #1976D2;
+}
+
+#weatherData, #forecastData {
+    text-align: left;
+    margin: 1em 0;
+}
+
+h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+p {
+    margin: 0.5em 0;
+    color: #555;
+}
+
+.spinner {
+    margin: 1em 0;
+    font-size: 1.5em;
+    color: #4CAF50;
+}
+
+@media (max-width: 600px) {
+    form {
+        gap: 0.5em;
+    }
+    form button, #convertTemp {
+        padding: 0.5em;
+        font-size: 0.9em;
+    }
+}
+
+button {
+    transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+

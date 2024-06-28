@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Weather App</h1>
+    </header>
+    <main>
+        <section>
+            <form id="weatherForm">
+                <label for="zipCode">Enter Zip Code:</label>
+                <input type="text" id="zipCode" name="zipCode" required>
+                <button type="submit">Get Weather</button>
+            </form>
+            <hr>
+            <form id="cityStateForm">
+                <label for="city">Enter City:</label>
+                <input type="text" id="city" name="city" required>
+                <label for="state">Enter State:</label>
+                <input type="text" id="state" name="state" required>
+                <button type="submit">Get Weather</button>
+            </form>
+            <button id="convertTemp">Convert to Celsius</button>
+            <div id="loadingSpinner" class="spinner" style="display: none;">
+                <i class="fas fa-spinner fa-spin"></i> Loading...
+            </div>
+        </section>
+        <section id="weatherData">
+            <!-- Weather data will be displayed here -->
+        </section>
+        <section id="forecastData">
+            <!-- 3-day forecast data will be displayed here -->
+        </section>
+    </main>
+    <script src="weather.js"></script>
+</body>
+</html>
+
+
+
+
+
+
