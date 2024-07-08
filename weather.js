@@ -58,8 +58,8 @@ function getWeatherDataByCityState(city, state) {
     const apiKey = '59f72fe52cd3e3850e1389dcc6cfaa11'; // API key for OpenWeatherMap
     const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city},${state},US&appid=${apiKey}`; // Geolocation API URL
 
-    fetch(geoUrl)
-        .then(response => response.json()) // Parse the response as JSON
+    fetch(geoUrl) // fetch to make HTTP requests to the OpenWeatherMap API.
+        .then(response => response.json()) // chained .then to process the response, convert it to JSON, and handle the JSON data.
         .then(data => {
             if (data.length === 0) { // Check if the response array is empty
                 throw new Error('City not found'); // Throw an error if the city is not found
@@ -79,7 +79,7 @@ function getWeatherData(lat, lon, city) {
     const apiKey = '59f72fe52cd3e3850e1389dcc6cfaa11'; // API key for OpenWeatherMap
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`; // Weather API URL
 
-    fetch(weatherUrl)
+    fetch(weatherUrl) //  handle the promises returned by the fetch calls. 
         .then(response => response.json()) // Parse the response as JSON
         .then(weatherData => {
             displayWeatherData(city, weatherData); // Call the function to display the weather data
@@ -94,13 +94,13 @@ function getWeatherData(lat, lon, city) {
 
 // Function to display weather data on the page
 function displayWeatherData(city, data) {
-    const currentDate = new Date().toLocaleDateString(); // Get the current date in a localized format
-    const currentTemp = data.main.temp; // Get the current temperature from the weather data
-    const feelsLike = data.main.feels_like; // Get the 'feels like' temperature from the weather data
-    const humidity = data.main.humidity; // Get the humidity from the weather data
-    const currentConditions = data.weather[0].description; // Get the current weather conditions from the weather data
-    const tempHi = data.main.temp_max; // Get the high temperature from the weather data
-    const tempLo = data.main.temp_min; // Get the low temperature from the weather data
+    const currentDate = new Date().toLocaleDateString(); // Date is a class
+    const currentTemp = data.main.temp; 
+    const feelsLike = data.main.feels_like; 
+    const humidity = data.main.humidity; 
+    const currentConditions = data.weather[0].description; 
+    const tempHi = data.main.temp_max; 
+    const tempLo = data.main.temp_min; 
 
     const weatherDataSection = document.getElementById('weatherData'); // Get the element with id 'weatherData'
     weatherDataSection.innerHTML = `
