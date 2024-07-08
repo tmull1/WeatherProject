@@ -38,7 +38,7 @@ function getWeatherDataByZip(zipCode) {
     const geoUrl = `https://api.openweathermap.org/geo/1.0/zip?zip=${zipCode}&appid=${apiKey}`; // Geolocation API URL
 
     fetch(geoUrl)
-        .then(response => response.json()) // Parse the response as JSON
+        .then(response => response.json()) // JSON.parse converts a JSON string into a JavaScript object
         .then(data => {
             if (!data.lat || !data.lon) { // Check if latitude and longitude are not available
                 throw new Error('Invalid zip code'); // Throw an error if the zip code is invalid
